@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <link href="../css/main.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="../js/scripts.js"></script>
+    </head>
+    <body>
+        <div class ="container">
+            <h2>Riddle 1</h2>
+            <p>What are the first four digits of this house?</p>
+            <input id="guess" maxlength="4"></input>
+            <button onClick="checkAnswer()" id="guess_button">Check My Answer</button></br>
+            <div id="answer" class="hidden">
+                <h2>1054 is Correct!</h2>
+                <h4>How to reset the puzzle:</h4>
+                <p>these are the rules on resetting the puzzle</p>
+                <button onClick="location.reload()">Reload</button>
+            </div>
+            <div id ="tryAgain" class="hidden">
+                <p>Sorry,<span id="user_guess"></span> is incorrect. Please try again</p>
+            </div>
+             </br>
+            <button onClick ="confirmHint()" id="hintButton">Give Me A Hint</button>
+            <div id="hint" class="hidden">
+                <h4>Hint #1</h4>
+                <p>Look at the house numbers and enter the first four digits of the house</p>
+                <button id="extraHintButton" onClick="showExtraHint()">I need another hint</button>
+                <div id="extraHint" class="hidden">
+                    <h4>Hint #2</h4>
+                    <p>A house has numbers on it to show the addres, what are the first four digits of this house's address?</p>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</DOCTYPE>
